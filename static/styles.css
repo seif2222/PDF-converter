@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    flex-direction: column;
+}
+.container {
+    background: #2a2a3d;
+    color: #eee;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #f1c40f;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #bbb;
+}
+input[type="file"], input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #1e1e2f;
+    color: #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+input[type="file"]:focus, input[type="text"]:focus, select:focus {
+    border-color: #f1c40f;
+}
+button {
+    width: 100%;
+    background-color: #f1c40f;
+    color: #1e1e2f;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+button:hover {
+    background-color: #d4ac0d;
+    transform: translateY(-3px);
+}
+#status {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #f1c40f;
+}
+.spinner {
+    display: none;
+    margin: 10px auto;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #f1c40f;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+footer {
+    margin-top: 20px;
+    color: #bbb;
+    font-size: 14px;
+    text-align: center;
+}
+footer p {
+    margin: 5px;
+}
+footer p:hover {
+    color: #f1c40f;
+    transition: color 0.3s ease;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
